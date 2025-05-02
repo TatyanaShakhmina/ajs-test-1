@@ -1,11 +1,10 @@
-image: node
+image: mcr.microsoft.com/dotnet/core/sdk:5.0
 
 environment:
   matrix:
     - nodejs_version: '18'
 
 install:
-  - ps: Install-Product node $env:nodejs_version
   - npm install
 
 build: off
