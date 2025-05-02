@@ -1,0 +1,17 @@
+image: node
+
+environment:
+  matrix:
+    - nodejs_version: '18'
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+build: off
+
+test_script:
+  - npm test
+
+cache:
+  - node_modules
